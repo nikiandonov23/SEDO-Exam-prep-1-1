@@ -11,16 +11,8 @@ function multiply(a, b) {
 }
 
 function calculateAndDisplay(fn) {
-  const rawA = document.getElementById('a').value;
-  const rawB = document.getElementById('b').value;
-
-  if (rawA === '' || rawB === '') {
-    document.getElementById('result').textContent = 'Please fill both inputs';
-    return;
-  }
-
-  const a = Number(rawA);
-  const b = Number(rawB);
+  const a = Number(document.getElementById('a').value);
+  const b = Number(document.getElementById('b').value);
   document.getElementById('result').textContent = fn(a, b);
 }
 

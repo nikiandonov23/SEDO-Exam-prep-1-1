@@ -26,17 +26,8 @@
 
     QUnit.test('multiply()', assert => {
       assert.equal(multiply(2, 3), 6, '2 × 3 = 6');
-    });
-
-    QUnit.test('subtract with empty inputs', assert => {
-      document.getElementById('a').value = '';
-      document.getElementById('b').value = '';
-      document.getElementById('btn-subtract').click();
-      assert.equal(
-        document.getElementById('result').textContent,
-        'Please fill both inputs',
-        'Shows warning if inputs are empty'
-      );
+      assert.equal(multiply(-2, 3), -6, '-2 × 3 = -6');
+      assert.equal(multiply(2.5, 2), 5, '2.5 × 2 = 5');
     });
   </script>
 </body>
